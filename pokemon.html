@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero top-nav top-nav--compact">
+        <div class="hero-header-row">
+          <button
+            id="nav-toggle"
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="top-nav-menu"
+            aria-label="Ouvrir le menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="top-nav-brand">
+            <a class="top-brand" href="index.html">
+              <h1>Pokédex</h1>
+            </a>
+          </div>
+          <div class="header-actions">
+            <div id="top-nav-menu" class="top-nav-menu">
+              <div class="hero-actions">
+                <div class="search-panel">
+                  <label id="pokemon-search-label" for="pokemon-search" class="sr-only"></label>
+                  <input
+                    id="pokemon-search"
+                    type="text"
+                    placeholder="Rechercher un Pokémon"
+                    autocomplete="off"
+                  />
+                  <ul id="search-suggestions" class="suggestions" aria-label="Suggestions"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="language-control">
+              <button
+                id="language-toggle"
+                class="language-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="language-menu"
+                aria-label="Choisir la langue"
+              >
+                <img class="language-flag" src="https://flagcdn.com/w20/fr.png" alt="" />
+                <span class="language-text">Français</span>
+              </button>
+              <div id="language-menu" class="language-menu" role="menu" aria-label="Choisir la langue">
+                <button class="language-option active" type="button" data-locale="fr" role="menuitem">
+                  <img class="language-flag" src="https://flagcdn.com/w20/fr.png" alt="" />
+                  <span class="language-name">Français</span>
+                </button>
+                <button class="language-option" type="button" data-locale="en" role="menuitem">
+                  <img class="language-flag" src="https://flagcdn.com/w20/us.png" alt="" />
+                  <span class="language-name">English</span>
+                </button>
+                <button class="language-option" type="button" data-locale="es" role="menuitem">
+                  <img class="language-flag" src="https://flagcdn.com/w20/es.png" alt="" />
+                  <span class="language-name">Español</span>
+                </button>
+                <button class="language-option" type="button" data-locale="de" role="menuitem">
+                  <img class="language-flag" src="https://flagcdn.com/w20/de.png" alt="" />
+                  <span class="language-name">Deutsch</span>
+                </button>
+                <button class="language-option" type="button" data-locale="it" role="menuitem">
+                  <img class="language-flag" src="https://flagcdn.com/w20/it.png" alt="" />
+                  <span class="language-name">Italiano</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <a class="back-link" href="index.html"></a>
+      <div id="detail-card" class="detail-card">
+        <p class="detail-placeholder"></p>
+      </div>
+    </div>
+
+    <script src="pokemon-api.js"></script>
+    <script src="pokemon.js?v=13"></script>
+  </body>
+</html>
